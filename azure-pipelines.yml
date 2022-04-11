@@ -31,11 +31,11 @@ steps:
     publishLocation: 'Container'
 - task: Docker@2
   inputs:
-    containerRegistry: 'benzito164/azuredevops'
+    containerRegistry: 'Docker'
     command: 'login'
 - task: Docker@2
   inputs:
-    containerRegistry: 'Docker Login'
-    repository: 'benzito164/azuredevops'
+    containerRegistry: 'Docker'
+    repository: 'azuredevops'
     command: 'buildAndPush'
     Dockerfile: '**/AzureDockerfile'
